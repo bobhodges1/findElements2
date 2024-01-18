@@ -8,5 +8,8 @@ test("find first instance of an odd number in inputArray", () => {
 });
 
 test("find first instance of a short string in inputArray", () => {
-    expect(findFirst(["banana", "dragonfruit", "plum","mango"], (n) => n % 2 === 1)).toBe("plum");
+    const fruitList = ["banana", "dragonfruit", "plum","mango"]
+    const isShort = (fruit) => fruit.length < 5 
+    expect(findFirst(fruitList, isShort)).toBe("plum");
 });
+// let x = findFirst([2,6,8,9],s => s % 2 === 1)
